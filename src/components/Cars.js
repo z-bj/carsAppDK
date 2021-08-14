@@ -22,18 +22,7 @@ const Car = ({ children, color }) => {
       </div>
     );
   } else {
-    return (
-      <div
-        style={{
-          backgroundColor: "pink",
-          width: "400px",
-          padding: "10px",
-          margin: "5px auto",
-        }}
-      >
-        <p>no data</p>
-      </div>
-    );
+    return null;
   }
 };
 
