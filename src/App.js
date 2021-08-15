@@ -4,7 +4,7 @@ import Mycars from "./components/Mycars";
 
 class App extends Component {
   state = {
-    titre: "Mon catalogue Voitures",
+    titre: "My Cars Catalog",
   };
 
   render() {
