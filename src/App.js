@@ -16,13 +16,13 @@ class App extends Component {
 
   changeViaParam = (titre) => {
     this.setState({
-      titre: titre, // dans react si les 2 parametres sont les memes on a le droit d'ecrire directement le nom de la valeur, ici : titre.
+      titre: titre, // dans react si les 2 parametres sont les memes on a le droit d' ecrire directement le nom de la valeur, ici : titre.
     });
   };
 
   changeViaBind = (param) => {
     this.setState({
-      titre: param, //le param que j'ai reccuperer via l'arrow funcino.
+      titre: param, //le param que j' ai reccuperer via l' arrow function.
     });
   };
 
@@ -40,11 +40,11 @@ class App extends Component {
         <button onClick={() => this.changeViaParam("Titre via un parametre")}>
           via param
         </button>{" "}
-        {/*//ici on souhaite passer un parametre a la foncion, mais elle va etre appeller des le chargement de la page, ce n'est pas ce que l'on souhaite,nous on veut quelle se lance lors du onClikc, donc on passe une annonym arrow function avant elle */}
+        {/*//ici on souhaite passer un parametre a la fonction, mais elle va etre appeller des le chargement de la page, ce n' est pas ce que l' on souhaite,nous on veut qu' elle se lance lors du onClick, donc on passe une annonym arrow function avant elle */}
         <button onClick={this.changeViaBind.bind(this, "Titre via Bind")}>
           via Bind
         </button>
-        {/*this pour rester dans le contexte de l'object, "titre via bind" va passer dans param et etre recuper puis mis a jour via le state*/}
+        {/*this pour rester dans le contexte de l' object, "titre via bind" va passer dans param et etre recupere puis mis a jour via le state*/}
         <input
           type="text"
           onChange={this.changeViaInput}
