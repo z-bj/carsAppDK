@@ -9,6 +9,7 @@ class Mycars extends Component {
       { name: "Mercedes", color: "black", year: "2010" },
       { name: "Peugeot", color: "green", year: "2018" },
     ],
+    titre: "My Cars Catalog 2",
   };
 
   addTenYears = () => {
@@ -18,14 +19,13 @@ class Mycars extends Component {
     this.setState({ updatedState });
   };
   render() {
-    const actualYear = new Date().getFullYear(); //obtain the actual year
+    const actualYear = new Date().getFullYear(); //the function provides us with the current year
 
     return (
       <div>
-        <h1>{this.props.title}</h1>
-
+        <h1>{this.state.titre}</h1>
+        {/*here we display the title from the state in app.js */}
         <button onClick={this.addTenYears}>add 10 years</button>
-
         <Car
           color={this.state.voitures[0].color}
           year={actualYear - this.state.voitures[0].year + " years"} // here we subtract the the year of production of the car from current year
