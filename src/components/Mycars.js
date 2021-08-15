@@ -44,6 +44,17 @@ class Mycars extends Component {
         >
           {this.state.voitures[2].name}
         </Car>
+
+        {this.state.voitures.map((voiture) => {
+          return (
+            <Car
+              color={voiture.color}
+              year={actualYear - voiture.year + "years"}
+            >
+              {voiture.name}
+            </Car>
+          ); // here  map return a table of objects [{},{},{}]
+        })}
       </div>
     );
   }
