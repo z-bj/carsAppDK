@@ -18,7 +18,7 @@ const Car = ({ children, color, year }) => {
         }}
       >
         <p>Marque: {children}</p>
-        <p>Annee: {year}</p>
+        <p>Age: {year}</p>
         {colorInfo}
       </div>
     );

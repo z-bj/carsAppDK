@@ -32,9 +32,16 @@
         "sont",
         "sorte",
         "souhaite",
+        "state",
         "texte",
+        "updated",
         "valeur",
         "veut",
-        "voitures"
+        "voitures",
+        "year"
+    ],
+    "cSpell.ignoreWords": [
+        "state",
+        "updated"
     ]
 }
