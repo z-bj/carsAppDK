@@ -1,12 +1,12 @@
 import React from "react";
 
-const Car = ({ children, color, year }) => {
+const Car = ({ nom, color, year }) => {
   // ** here we use destructuring because we have {objects}
 
   const colorInfo = color ? <p>Couleur: {color} </p> : <p>Couleur: no color</p>; // ** condition on the color
 
-  if (children) {
-    //** condition about children
+  if (nom) {
+    //** condition about nom
     return (
       <div
         style={{
@@ -17,7 +17,7 @@ const Car = ({ children, color, year }) => {
           margin: "5px auto",
         }}
       >
-        <p>Marque: {children}</p>
+        <p>Marque: {nom}</p>
         <p>Age: {year}</p>
         {colorInfo}
       </div>

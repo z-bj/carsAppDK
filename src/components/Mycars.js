@@ -26,34 +26,18 @@ class Mycars extends Component {
         <h1>{this.state.titre}</h1>
         {/*here we display the title from the state in app.js */}
         <button onClick={this.addTenYears}>add 10 years</button>
-        <Car
-          color={this.state.voitures[0].color}
-          year={actualYear - this.state.voitures[0].year + " years"} // here we subtract the the year of production of the car from current year
-        >
-          {this.state.voitures[0].name}
-        </Car>
-        <Car
-          color={this.state.voitures[1].color}
-          year={actualYear - this.state.voitures[1].year + " years"} // here we subtract the the year of production of the car from current year
-        >
-          {this.state.voitures[1].name}
-        </Car>
-        <Car
-          color={this.state.voitures[2].color}
-          year={actualYear - this.state.voitures[2].year + " years"} // here we subtract the the year of production of the car from current year
-        >
-          {this.state.voitures[2].name}
-        </Car>
 
-        {this.state.voitures.map((voiture) => {
+        {this.state.voitures.map((voiture, index) => {
           return (
-            <Car
-              color={voiture.color}
-              year={actualYear - voiture.year + "years"}
-            >
-              {voiture.name}
-            </Car>
+            <div key={index}>
+              <Car
+                nom={voiture.name}
+                color={voiture.color}
+                year={actualYear - voiture.year + " years"}
+              />
+            </div>
           ); // here  map return a table of objects [{},{},{}]
+          //remove props from hard-coded <car/> components and replace them with map()
         })}
       </div>
     );
