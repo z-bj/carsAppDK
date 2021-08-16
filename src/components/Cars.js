@@ -3,17 +3,17 @@ import React from "react";
 const Car = ({ nom, color, year }) => {
   // ** here we use destructuring because we have {objects}
 
-  const colorInfo = color ? <p>Couleur: {color} </p> : <p>Couleur: no color</p>; // ** condition on the color
+  const colorInfo = color ? <p>Color: {color} </p> : <p>Color: no color</p>; // ** condition on the color
 
   if (nom) {
     //** condition about nom
     return (
       <tr>
         <td>
-          <p>Marque: {nom}</p>
+          <p>Brand: {nom}</p>
         </td>
         <td>
-          <p>Age: {year}</p>
+          <p>Year: {year}</p>
         </td>
         <td>{colorInfo}</td>
       </tr>

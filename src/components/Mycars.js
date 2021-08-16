@@ -36,13 +36,13 @@ class Mycars extends Component {
 
           {this.state.voitures.map((voiture, index) => {
             return (
-              <div key={index}>
+              <Fragment key={index}>
                 <Car
                   nom={voiture.name}
                   color={voiture.color}
                   year={actualYear - voiture.year + " years"}
                 />
-              </div>
+              </Fragment>
             ); // here  map return a table of objects [{},{},{}]
             //remove props from hard-coded <car/> components and replace them with map()
           })}
