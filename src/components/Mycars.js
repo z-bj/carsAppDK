@@ -27,12 +27,13 @@ class Mycars extends Component {
         {/*here we display the title from the state in app.js */}
         <button onClick={this.addTenYears}>add 10 years</button>
 
-        <table>
+        <table className="carsTable">
           <tr>
             <th>Brand</th>
             <th>Year</th>
             <th>Color</th>
           </tr>
+
           {this.state.voitures.map((voiture, index) => {
             return (
               <div key={index}>
