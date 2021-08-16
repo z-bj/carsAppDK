@@ -8,19 +8,15 @@ const Car = ({ nom, color, year }) => {
   if (nom) {
     //** condition about nom
     return (
-      <div
-        style={{
-          // *! in-line CSS for trying, warning, high priority
-          backgroundColor: "pink",
-          width: "400px",
-          padding: "10px",
-          margin: "5px auto",
-        }}
-      >
-        <p>Marque: {nom}</p>
-        <p>Age: {year}</p>
-        {colorInfo}
-      </div>
+      <tr>
+        <td>
+          <p>Marque: {nom}</p>
+        </td>
+        <td>
+          <p>Age: {year}</p>
+        </td>
+        <td>{colorInfo}</td>
+      </tr>
     );
   } else {
     return (
